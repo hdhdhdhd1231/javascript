@@ -1,0 +1,1 @@
+console.log(prompt("Introduce un número:") % 2 === 0 ? "Par" : "Impar");
