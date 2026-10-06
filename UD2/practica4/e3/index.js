@@ -1,7 +1,5 @@
-function recorrer(ok1, ok2, ok3, arr) {
-    console.log(ok1 + ok2);
-    return arr;
+function okk(ok1, ok2, ok3, ok4) {
+    console.log(ok1, ok2, ok3, ok4);
 }
-
-arr = [1,2,3,4];
-console.log(recorrer(1,2,3,...arr));
+const oks = ["ok", "ok1", "ok2", "ok3"];
+okk(...oks);
