@@ -8,7 +8,7 @@ function repeticion(palabra) {
     return contador;
 };
 
-// const newArr = Array.from(...arr, (x) => x.length === "4"); una prueba de una anonima con from pero prefeiro simplificarlo con un forEach
+// const newArr = Array.from(...arr, (x) => x.length === "4"); // prueba de una anonima con from pero prefeiro simplificarlo con un forEach
 function newArr() {
     let arrN = [];
     arr.forEach((x) => {
