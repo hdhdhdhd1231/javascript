@@ -50,7 +50,7 @@ class Catalogo {
 function esLimpio(titulo, autor, numPags) {
     if (titulo.trim() === "" || titulo === null || titulo === undefined) {
         document.body.innerHTML += `<h1>titulo no puede estar vacio</h1>`;
-        return false;        
+        return false;
     }
 
     if (autor.trim() === "" || autor === null || autor === undefined) {
