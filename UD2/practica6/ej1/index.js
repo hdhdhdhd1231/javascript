@@ -49,13 +49,8 @@ class Catalogo {
 
 function esLimpio(titulo, autor, numPags) {
     if (titulo.trim() === "" || titulo === null || titulo === undefined) {
-<<<<<<< HEAD
         document.body.innerHTML += `<h1>titulo no puede estar vacio</h1>`;
         return false;
-=======
-        document.body.innerHTML += `<h2>titulo no puede estar vacio</h2></br>`;
-        return false;        
->>>>>>> 90182f3d868eec5576f1e315c8304b2eac206f80
     }
 
     if (autor.trim() === "" || autor === null || autor === undefined) {
