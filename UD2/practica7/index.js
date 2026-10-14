@@ -32,11 +32,13 @@ document.body.innerHTML += `<h2><b>${fichaCafe['nombre']}</b></h2>`;
 document.body.innerHTML += `<img src="${fichaCafe['imagen']}" style="max-height: 300px"></img>`;
 
 const fichaCafe2 = {
-    "id": cafe['id'],
-    "nombre": cafe['title'],
-    "ingredientes": cafe['ingredients']
+    "id": fichaCafe['id'],
+    "nombre": fichaCafe['nombre'],
+    "ingredientes": fichaCafe['ingredientes']
 };
 let cafe2 = JSON.stringify(fichaCafe2, null, 2);
-
+console.log(cafe2);
 document.body.innerHTML += `<h2><b>Ficha en formato JSON</b></h2>`; // podria haber usado style con la propiedad 'font-weight' y poner bold, pero use la etiqueta <b> por comodidad
 document.body.innerHTML += `<pre>${cafe2}</pre>`;
+
+cafe2.includes('imagen') ? console.log("¿Incluye img? Si") : console.log("¿Incluye img? No");
