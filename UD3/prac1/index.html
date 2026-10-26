@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Control por Voz - NUI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      transition: background-color 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .status {
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Panel de Control por Voz</h1>
+    <p>Di ordenes como: <strong>"Rojo"</strong>, <strong>"Verde"</strong>, <strong>"Azul"</strong> o <strong>"Restablecer"</strong>.</p>
+    <button id="btnStart">Activar Micrófono</button>
+    <p class="status" id="statusText">Estado: Inactivo</p>
+    <p>Último comando detectado: <span id="commandText">PRUEBA</span></p>
+    
+    <!-- añadido por mi -->
+    <p>Respuesta: <span id="respuestaTxt">Esperando un comando...</span></p>
+    <button id="btnAumentarTxt">Aumentar Texto</button>
+    <button id="btnDisminuirTxt">Disminuir Texto</button>
+    <!-- se que esta mal usar </br> pero no voy a usar style para añadir margin -->
+    </br>
+    </br>
+    <button id="btnLight">Modo claro</button>
+    <button id="btnDark">Modo oscuro</button>
+
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
