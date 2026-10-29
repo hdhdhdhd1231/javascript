@@ -2,14 +2,14 @@
 // sin prefijo. Se usa la que exista. Si ninguna existe, el valor es undefined.
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-// añadido por mi
+// añadido por mi (capturar los botones)
 const btnStart = document.getElementById('btnStart');
 const statusText = document.getElementById('statusText');
 
 // Si el navegador no soporta la API, se avisa y no se ejecuta el resto.
 if (!SpeechRecognition) {
   alert("Tu navegador no soporta la Web Speech API. Prueba con Google Chrome u Edge.");
-    // añadido por mi
+    // añadido por mi (muestra un mensaje si no permite reconocer la voz y tambien desactiva el boton con la propiedad 'disabled')
     statusText.textContent = "error, tu navegador no admite el reconocimiento por voz.";
     btnStart.disabled = true;
 } else {
@@ -29,7 +29,7 @@ if (!SpeechRecognition) {
   const statusText = document.getElementById('statusText');
   const commandText = document.getElementById('commandText');
 
-    // añadido por mi
+    // añadido por mi (capturas de los diferentes elementos html que modificare o necesitare para eventos)
     const btnAumentarTxt = document.getElementById('btnAumentarTxt');
     const btnDisminuirTxt = document.getElementById('btnDisminuirTxt');
     const card = document.querySelector('.card');
@@ -81,12 +81,14 @@ if (!SpeechRecognition) {
     // Se muestra en pantalla lo que se ha entendido.
     commandText.textContent = transcript;
 
-    // añadido por mi
+    // añadido por mi (inicializar la respuesta)
     let respuesta = "";
 
     // Se busca una palabra clave dentro de la frase y se aplica la acción.
     // includes() permite que funcione con frases como "pon el fondo en rojo".
     // Si no coincide ningún comando, no se cambia nada.
+	
+	// las respuestas de los cambios que se aplican guardados en la variable 'repsuesta'
     if (transcript.includes('rojo')) {
       document.body.style.backgroundColor = '#f8d7da';
         // añadido por mi
@@ -105,7 +107,7 @@ if (!SpeechRecognition) {
         respuesta = "Fondo restablecido";
     }
 
-    // añadido por mi
+    // añadido por mi (si se permite hacer uso de 'speechSynthesis', dice por voz la respuesta obtenida; en español)
     respuestaTxt.textContent = respuesta;
     if ('speechSynthesis' in window) {
         const mensaje = new SpeechSynthesisUtterance(respuesta);
@@ -129,7 +131,7 @@ if (!SpeechRecognition) {
     }
   };
 
-    // añadido por mi
+    // añadido por mi (en los eventos 'click' de los diferentes botones) aplico cambios de tamaño de letra y fondos
     btnAumentarTxt.addEventListener('click', () => {
         commandText.style.fontSize = "24px";
     });
