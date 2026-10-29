@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Lista de la compra</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1>Lista de la compra</h1>
+    <p>Di ordenes como: <strong>"Añade leche"</strong>, <strong>"Quita leche"</strong> o <strong>"Vacía la lista"</strong>.</p>
+    
+    <!-- por voz -->
+    <button id="btnVoz">Activar Micrófono</button>
+
+    <p id="respuestaTxt"></p>
+
+    <!-- sin voz -->
+    <input type="text" id="productoInp">
+    <button id="btnAnadir">Añadir</button>
+    <button id="btnQuitar">Quitar</button>
+    <button id="btnVaciar">Vaciar lista</button>
+
+    <!-- lista -->
+    <ul id="lista"></ul>
+</body>
+</html>
